@@ -20,7 +20,7 @@ h1 {
 }
 
 tr > td:nth-child(2) {
-    width: 38px;
+    width: 60px;
 }
 
 input {

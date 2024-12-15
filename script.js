@@ -23,6 +23,7 @@ for (const k in options) {
     input.addEventListener("input", () => {
         options[k] = input.value;
         value.innerText = `(${input.value})`;
+        document.getElementById("mines").max = options.rows * options.cols - 1;
     });
 }
 
