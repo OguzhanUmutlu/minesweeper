@@ -1,0 +1,133 @@
+* {
+    font-family: monospace, serif;
+    transition: 0.1s;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    /*noinspection CssInvalidPropertyValue*/
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    user-select: none;
+}
+
+body {
+    background: #36393d;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+tr > td:nth-child(2) {
+    width: 38px;
+}
+
+input {
+    outline: none;
+}
+
+.game-picker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 550px;
+    height: 300px;
+    background: #545454;
+    border: 2px solid #7a7a7a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    transition: 2s;
+}
+
+.picker-fade {
+    pointer-events: none;
+    scale: 0;
+    opacity: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 5px #1e1e1e;
+    background: #919191;
+    color: whitesmoke;
+}
+
+button:hover {
+    cursor: pointer;
+    background: #7a7a7a;
+}
+
+button:active {
+    cursor: pointer;
+    background: #7a7a7a;
+    box-shadow: 0 0 #1e1e1e;
+    translate: 0 5px;
+}
+
+.cells-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 50%;
+    scale: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 2s;
+}
+
+.cells {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.you-win-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    scale: 0;
+    opacity: 0;
+    pointer-events: none;
+    color: whitesmoke;
+    transition: 1s;
+}
+
+.you-win-reveal {
+    scale: 1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cell {
+    background: #c0c0c0 no-repeat;
+    background-size: 100% 100%;
+    aspect-ratio: 1 / 1;
+    -webkit-font-smoothing: none;
+}
+
+.cells-visible {
+    opacity: 1;
+    scale: 1;
+    pointer-events: auto;
+}
+
+.preload {
+    opacity: 0;
+}

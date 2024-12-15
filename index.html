@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Mine Sweeper</title>
+</head>
+<body>
+<div class="game-picker">
+    <h1>Mine Sweeper</h1>
+
+    <table>
+        <tr>
+            <td><label for="rows">Grid width</label></td>
+            <td id="rows-value"></td>
+            <td><input type="range" id="rows" min="1" max="64" value=""></td>
+        </tr>
+        <tr>
+            <td><label for="cols">Grid height</label></td>
+            <td id="cols-value"></td>
+            <td><input type="range" id="cols" min="1" max="64" value=""></td>
+        </tr>
+        <tr>
+            <td><label for="mines">Mines</label></td>
+            <td id="mines-value"></td>
+            <td><input type="range" id="mines" min="1" max="64" value=""></td>
+        </tr>
+    </table>
+
+    <button id="start">Start</button>
+</div>
+
+<div class="cells-container">
+    <div class="cells"></div>
+    <div class="you-win-container">
+        <div>
+            <h1 style="font-size: 40px; margin: 0">You win!</h1><br>
+            <button id="play-again">Play again</button>
+        </div>
+    </div>
+</div>
+
+<div class="preload"></div>
+</body>
+<script src="script.js"></script>
+</html>
